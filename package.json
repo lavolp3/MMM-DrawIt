@@ -1,0 +1,31 @@
+{
+  "name": "mmm-drawit",
+  "version": "1.0.0",
+  "description": "MOdule for MagicMirror2. Draw a text on your mirror in a cool way. Because why not? Uses text-to-svg and svg paths.",
+  "main": "MMM-DrawIt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lavolp3/MMM-DrawIt.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "Magic",
+    "Mirror",
+    "svg",
+    "animated",
+    "text"
+  ],
+  "author": "Dirk Kovert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lavolp3/MMM-DrawIt/issues"
+  },
+  "homepage": "https://github.com/lavolp3/MMM-DrawIt#readme",
+  "dependencies": {
+    "text-to-svg": "^3.1.5"
+  },
+  "devDependencies": {}
+}

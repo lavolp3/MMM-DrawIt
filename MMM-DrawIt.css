@@ -1,0 +1,13 @@
+.MMM-DrawIt {
+  height: 200px;
+  //width: 400px;
+}
+
+.MMM-DrawIt #wrapper {
+  height: 100px;
+  //width: 400px;
+}
+
+.MMM-DrawIt path {
+  //stroke-width: 2px;
+}

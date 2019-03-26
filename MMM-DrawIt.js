@@ -43,6 +43,22 @@ Module.register("MMM-DrawIt", {
   socketNotificationReceived: function(notification, payload) {
     if (notification === "SVG") {
       this.log("Received payload: "+payload);
+      
+      /*Convert the svg element to one with multiple path.
+	    * The string is cut at every M position inside the path element.
+	    *
+	    */
+	    var svgArray = [];
+	    var pos = payload.indexOf("M");
+	    svgArray.push(payload.slice(0,pos+1));      //first moveto needs to be retained
+	    svgArray.push(payload.replace(/M/g, '\"/><path fill=\"'+this.config.fillColor+'\" stroke=\"'+this.config.strokeColor+'\" d=\"M'));  //all other moveto's are replaced by a new path (incl. moveto)
+	    var svgString = svgArray.join('');
+	    this.log("Converted payload to "+svgString)
+	  
+      wrapper = document.getElementById("wrapper");
+      wrapper.innerHTML = svgString;
+
+      
       wrapper = document.getElementById("wrapper");
       wrapper.innerHTML = payload;
 

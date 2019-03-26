@@ -5,6 +5,8 @@ Module.register("MMM-DrawIt", {
     strokeColor : "white",
     strokeWidth: 3,
     fontSize: 172,
+    fontPath: "/home/pi/MagicMirror/modules/MMM-DrawIt/fonts/",
+    fontName: "Matilda.ttf",
     debug: true,
   },
 

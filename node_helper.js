@@ -1,6 +1,5 @@
 var NodeHelper = require("node_helper");
 var TextToSVG = require('text-to-svg');
-var textToSVG = TextToSVG.loadSync('/home/pi/MagicMirror/modules/MMM-DrawIt/fonts/Roboto-BlackItalic.ttf');
 
 module.exports = NodeHelper.create({
   start: function() {},
@@ -18,7 +17,8 @@ module.exports = NodeHelper.create({
         anchor: "top",
         attributes: attributes
       };
-      console.log("Converting SVG");
+      var textToSVG = TextToSVG.loadSync(config.fontPath + config.fontName);
+      console.log("Converting SVG using " + config.fontName);
       var svg = textToSVG.getSVG(config.text, options);
       console.log(svg);
       this.sendSocketNotification("SVG", svg);
